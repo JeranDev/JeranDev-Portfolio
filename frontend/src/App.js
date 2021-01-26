@@ -1,16 +1,20 @@
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+//Router
+import { Switch, Route, useLocation } from 'react-router-dom'
 //Style
 import GlobalStyle from './components/GlobalStyle'
-//Screens
+//Components
+import Nav from './components/Nav'
 import HomeScreen from './screens/HomeScreen'
 
 function App() {
+  const location = useLocation()
   return (
     <>
-      <GlobalStyle></GlobalStyle>
-      <Router>
+      <GlobalStyle />
+      <Nav />
+      <Switch location={location} key={location.pathname}>
         <Route path='/' component={HomeScreen} exact />
-      </Router>
+      </Switch>
     </>
   )
 }

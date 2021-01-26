@@ -10,6 +10,7 @@ const HomeScreen = () => {
         initial='hidden'
         animate='show'
         exit='exit'
+        style={{ color: 'white' }}
       >
         Home!
       </motion.h1>

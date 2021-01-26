@@ -11,12 +11,14 @@ const GlobalStyle = createGlobalStyle`
   @media (max-width: 1700px) {
     font-size: 75%
   }
+  }
 
   body {
   background: #1b1b1b;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Lato', sans-serif;
   overflow-x: hidden;
-
+  }
+  
   button {
   font-weight: bold;
   font-size: 1.1.rem;
@@ -26,48 +28,42 @@ const GlobalStyle = createGlobalStyle`
   background: transparent;
   color: white;
   transition: all 0.5s ease;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Lato', sans-serif;
   &:hover{
     background-color: #23d997;
     color: white;
+    }
   }
-}
 
-h1 {
-  color: white
-}
 
-h2 {
+  h2 {
   font-weight: lighter;
   font-size: 4rem;
-}
+  }
 
-h3 {
+  h3 {
   color: white;
-}
+  }
 
-h4 {
+  h4 {
   font-weight: bold;
   font-size: 2rem;
-}
+  }
 
-a {
+  a {
   font-size: 1.1.rem;
-}
+  }
 
-span {
+  span {
   font-weight: bold;
-  color: #23d997;
-}
+  color: #46EB43;
+  }
 
-p {
+  p {
   padding: 3rem 0;
   color: #ccc;
   font-size: 1.4rem;
   line-height: 150%;
-}
-}
-}
-
+  }
 `
 export default GlobalStyle
