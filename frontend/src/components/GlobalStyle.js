@@ -15,8 +15,10 @@ const GlobalStyle = createGlobalStyle`
 
   body {
   background: #1B1B1B;
+  color: white;
   font-family: 'Lato', sans-serif;
   overflow-x: hidden;
+  overflow-y: hidden;
   }
   
   button {

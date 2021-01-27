@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import { useLocation } from 'react-router-dom'
 //Images
-import { WaveOne, WaveTwo } from '../components/Waves'
+import { WaveOne, WaveTwo, WaveThree } from '../components/Waves'
 
 const Nav = () => {
   const { pathname } = useLocation()
@@ -25,15 +25,15 @@ const Nav = () => {
       <StyledNav>
         <WaveOne />
         <WaveTwo />
+        <WaveThree />
         <h1>
           <Link id='logo' to='/'>
-            Jeran Burget <br />
-            <StyledSpan>Web Developer</StyledSpan>
+            Jeran Burget
           </Link>
         </h1>
         <ul>
           <motion.li whileHover={{ scale: 1.2 }}>
-            <Link to='/ecomm'>Project 1: E-Comm</Link>
+            <Link to='/ecomm'>Project: E-Comm</Link>
             <Line
               transition={{ duration: 0.75 }}
               initial={{ width: '0%' }}
@@ -43,7 +43,7 @@ const Nav = () => {
             />
           </motion.li>
           <motion.li whileHover={{ scale: 1.2 }}>
-            <Link to='/plantbag'>Project 2: Plant Bag</Link>
+            <Link to='/plantbag'>Project: Plant Bag</Link>
             <Line
               transition={{ duration: 0.75 }}
               initial={{ width: '0%' }}
@@ -53,7 +53,7 @@ const Nav = () => {
             />
           </motion.li>
           <motion.li whileHover={{ scale: 1.2 }}>
-            <Link to='/hellovit'>Project 3: Hellovit</Link>
+            <Link to='/hellovit'>Project: Hellovit</Link>
             <Line
               transition={{ duration: 0.75 }}
               initial={{ width: '0%' }}
@@ -74,7 +74,7 @@ const StyledNav = styled(motion.nav)`
   margin: auto;
   justify-content: space-between;
   align-items: center;
-  padding: 2.5rem 10rem;
+  padding: 1.5rem 10rem;
   background: #1f2529;
   position: sticky;
   top: 0;
@@ -95,7 +95,6 @@ const StyledNav = styled(motion.nav)`
     font-size: 3rem;
     font-family: 'Abril Fatface', cursive;
     font-weight: lighter;
-    line-height: 0.5;
   }
   li {
     font-weight: 700;
@@ -120,15 +119,11 @@ const StyledNav = styled(motion.nav)`
       justify-content: space-around;
       width: 100%;
       li {
-        font-size: 1.2rem;
+        font-size: 1rem;
         padding: 0;
       }
     }
   }
-`
-
-const StyledSpan = styled(motion.span)`
-  font-size: 1.5rem;
 `
 
 const Line = styled(motion.div)`

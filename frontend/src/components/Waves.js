@@ -5,20 +5,18 @@ import { motion } from 'framer-motion'
 export const WaveOne = () => {
   return (
     <WaveSvg
-      width='2400'
-      height='105'
-      viewBox='0 0 2400 105'
+      width='100%'
+      height='80%'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
-      preserveAspectRatio='xMaxYMin meet'
     >
       <motion.path
         initial={{ pathLength: 0, pathOffset: 1 }}
         animate={{ pathLength: 1, pathOffset: 0 }}
         transition={{ duration: 1 }}
-        d='M1 51.1279C220.583 84.6544 342.937 95.4404 555.17 51.1279C785.752 3.39622 915.031 10.8263 1145.61 51.1279C1357.01 92.9703 1472.37 96.9005 1669.56 51.1279C1956.06 -16.4597 2113.72 -3.9763 2393 51.1279'
+        d='M1 47.8175C360.733 81.8505 567.017 86.3776 949.668 47.8175C1223.98 9.33357 1400.18 7.2123 1765.59 47.8175C2194.64 90.5953 2407.34 86.303 2756.35 47.8175C3096.9 -12.8577 3329.63 -16.3298 3841 47.8175'
         stroke='#254F24'
-        strokeOpacity='.5'
+        strokeOpacity='.3'
         strokeWidth='3'
       />
     </WaveSvg>
@@ -28,20 +26,39 @@ export const WaveOne = () => {
 export const WaveTwo = () => {
   return (
     <WaveSvg
-      width='2400'
-      height='140'
-      viewBox='0 0 2400 140'
+      width='100%'
+      height='60%'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
-      preserveAspectRatio='xMinYMax meet'
     >
       <motion.path
         initial={{ pathLength: 0, pathOffset: 1 }}
         animate={{ pathLength: 1, pathOffset: 0 }}
         transition={{ duration: 1 }}
-        d='M1 51.6283C225.084 86.5237 353.581 90.0325 591.941 51.6283C762.814 13.2999 872.573 11.1872 1100.19 51.6283C1367.45 94.2332 1499.95 89.9582 1717.35 51.6283C1929.48 -8.80165 2074.46 -12.2598 2393 51.6283'
+        d='M1 47.8175C360.733 81.8505 567.017 86.3776 949.668 47.8175C1223.98 9.33357 1400.18 7.2123 1765.59 47.8175C2194.64 90.5953 2407.34 86.303 2756.35 47.8175C3096.9 -12.8577 3329.63 -16.3298 3841 47.8175'
         stroke='#51AD31'
-        strokeOpacity='.5'
+        strokeOpacity='.3'
+        strokeWidth='3'
+      />
+    </WaveSvg>
+  )
+}
+
+export const WaveThree = () => {
+  return (
+    <WaveSvg
+      width='100%'
+      height='100%'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+    >
+      <motion.path
+        initial={{ pathLength: 0, pathOffset: 1 }}
+        animate={{ pathLength: 1, pathOffset: 0 }}
+        transition={{ duration: 1 }}
+        d='M1 47.8175C360.733 81.8505 567.017 86.3776 949.668 47.8175C1223.98 9.33357 1400.18 7.2123 1765.59 47.8175C2194.64 90.5953 2407.34 86.303 2756.35 47.8175C3096.9 -12.8577 3329.63 -16.3298 3841 47.8175'
+        stroke='#7DE87B'
+        strokeOpacity='.3'
         strokeWidth='3'
       />
     </WaveSvg>
