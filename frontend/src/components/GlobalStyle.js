@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-  background: #1b1b1b;
+  background: #1B1B1B;
   font-family: 'Lato', sans-serif;
   overflow-x: hidden;
   }

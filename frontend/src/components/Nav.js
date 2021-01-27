@@ -27,56 +27,41 @@ const Nav = () => {
         <WaveTwo />
         <h1>
           <Link id='logo' to='/'>
-            JeranDev <br />
+            Jeran Burget <br />
             <StyledSpan>Web Developer</StyledSpan>
           </Link>
         </h1>
         <ul>
-          <li>
+          <motion.li whileHover={{ scale: 1.2 }}>
             <Link to='/ecomm'>Project 1: E-Comm</Link>
             <Line
               transition={{ duration: 0.75 }}
               initial={{ width: '0%' }}
               animate={{
-                width:
-                  pathname === '/ecomm'
-                    ? windowSize > 1300
-                      ? '45%'
-                      : '100%'
-                    : '0%',
+                width: pathname === '/ecomm' ? '100%' : '0%',
               }}
             />
-          </li>
-          <li>
+          </motion.li>
+          <motion.li whileHover={{ scale: 1.2 }}>
             <Link to='/plantbag'>Project 2: Plant Bag</Link>
             <Line
               transition={{ duration: 0.75 }}
               initial={{ width: '0%' }}
               animate={{
-                width:
-                  pathname === '/plantbag'
-                    ? windowSize > 1300
-                      ? '44%'
-                      : '100%'
-                    : '0%',
+                width: pathname === '/plantbag' ? '100%' : '0%',
               }}
             />
-          </li>
-          <li>
+          </motion.li>
+          <motion.li whileHover={{ scale: 1.2 }}>
             <Link to='/hellovit'>Project 3: Hellovit</Link>
             <Line
               transition={{ duration: 0.75 }}
               initial={{ width: '0%' }}
               animate={{
-                width:
-                  pathname === '/hellovit'
-                    ? windowSize > 1300
-                      ? '47%'
-                      : '100%'
-                    : '0%',
+                width: pathname === '/hellovit' ? '100%' : '0%',
               }}
             />
-          </li>
+          </motion.li>
         </ul>
       </StyledNav>
     </>
@@ -89,11 +74,12 @@ const StyledNav = styled(motion.nav)`
   margin: auto;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 10rem;
-  background: #282828;
+  padding: 2.5rem 10rem;
+  background: #1f2529;
   position: sticky;
   top: 0;
   z-index: 10;
+  border-bottom: 1px solid #46eb43;
   a {
     color: white;
     text-decoration: none;
@@ -115,7 +101,7 @@ const StyledNav = styled(motion.nav)`
     font-weight: 700;
     padding-left: 10rem;
     position: relative;
-    font-size: 1rem;
+    font-size: 1.2rem;
     z-index: 15;
   }
   span {
@@ -149,9 +135,9 @@ const Line = styled(motion.div)`
   height: 0.3rem;
   background: #46eb43;
   width: 0%;
-  position: absolute;
-  bottom: -80%;
-  left: 55%;
+  position: relative;
+  bottom: -50%;
+  left: 0%;
   @media (max-width: 1300px) {
     left: 0%;
   }
