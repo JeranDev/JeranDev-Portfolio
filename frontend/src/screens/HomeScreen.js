@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import code from '../images/code.jpg'
+import Links from '../components/Links'
 
 const HomeScreen = () => {
   return (
@@ -11,6 +12,7 @@ const HomeScreen = () => {
           <span>Full-Stack Web Developer</span>
         </h2>
       </Info>
+      <Links />
     </Cover>
   )
 }
@@ -37,16 +39,12 @@ const Info = styled(motion.div)`
   position: relative;
   height: 30%;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
+  padding-bottom: 2rem;
   z-index: 1;
   h2 {
     border-bottom: 1px solid #46eb43;
     padding-bottom: 1rem;
-  }
-  @media (max-width: 800px) {
-    h2 {
-      font-size: 2rem;
-    }
   }
 `
 

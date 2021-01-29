@@ -23,17 +23,17 @@ const GlobalStyle = createGlobalStyle`
   
   button {
   font-weight: bold;
-  font-size: 1.1.rem;
+  font-size: 1.1rem;
   cursor: pointer;
   padding: 1rem 2rem;
-  border: 3px solid #23d997;
+  border: 3px solid #46EB43;
   background: transparent;
   color: white;
   transition: all 0.5s ease;
   font-family: 'Lato', sans-serif;
   &:hover{
-    background-color: #23d997;
-    color: white;
+    background-color: #46EB43;
+    color: black;
     }
   }
 
@@ -66,6 +66,18 @@ const GlobalStyle = createGlobalStyle`
   color: #ccc;
   font-size: 1.4rem;
   line-height: 150%;
+  }
+
+  @media (max-width: 800px) {
+    h2 {
+      font-size: 2rem;
+    }
+  }
+
+  @media (min-width: 2800px) {
+    h2 {
+      font-size: 8rem;
+    }
   }
 `
 export default GlobalStyle

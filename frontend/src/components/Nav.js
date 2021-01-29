@@ -74,7 +74,7 @@ const StyledNav = styled(motion.nav)`
   margin: auto;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 10rem;
+  padding: 1rem 10rem;
   background: #1f2529;
   position: sticky;
   top: 0;
@@ -83,6 +83,9 @@ const StyledNav = styled(motion.nav)`
   a {
     color: white;
     text-decoration: none;
+    &:hover {
+      color: #46eb43;
+    }
   }
   ul {
     display: flex;
@@ -124,6 +127,15 @@ const StyledNav = styled(motion.nav)`
       }
     }
   }
+  @media (min-width: 2800px) {
+    padding: 1.5rem 10rem;
+    #logo {
+      font-size: 6rem;
+    }
+    li {
+      font-size: 2.4rem;
+    }
+  }
 `
 
 const Line = styled(motion.div)`
@@ -133,9 +145,6 @@ const Line = styled(motion.div)`
   position: relative;
   bottom: -50%;
   left: 0%;
-  @media (max-width: 1300px) {
-    left: 0%;
-  }
 `
 
 export default Nav
