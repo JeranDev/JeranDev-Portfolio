@@ -1,33 +1,48 @@
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
+import { pageAnimation, fade } from '../animation'
 import resume from '../images/Jeran-Burget-Resume.pdf'
 
 const Links = () => {
   return (
     <>
-      <StyledLinks>
+      <StyledLinks variants={pageAnimation} initial='hidden' animate='show'>
         <motion.a
+          variants={fade}
+          initial='hidden'
+          animate='show'
           href='https://www.linkedin.com/in/jeran-burget-2181651a3/'
           target='_blank'
         >
           <motion.i class='fab fa-linkedin' whileHover={{ scale: 1.2 }} />
         </motion.a>
 
-        <motion.a href='https://github.com/JeranDev' target='_blank'>
+        <motion.a
+          variants={fade}
+          initial='hidden'
+          animate='show'
+          href='https://github.com/JeranDev'
+          target='_blank'
+        >
           <motion.i
             class='fab fa-github-square'
             whileHover={{ scale: 1.2 }}
           ></motion.i>
         </motion.a>
 
-        <motion.a href='mailto:jerandev@outlook.com'>
+        <motion.a
+          variants={fade}
+          initial='hidden'
+          animate='show'
+          href='mailto:jerandev@outlook.com'
+        >
           <motion.i
             class='fas fa-envelope-square'
             whileHover={{ scale: 1.2 }}
           ></motion.i>
         </motion.a>
       </StyledLinks>
-      <StyledButton>
+      <StyledButton variants={fade} initial='hidden' animate='show'>
         <motion.a href={resume} target='_blank'>
           Resumé
         </motion.a>

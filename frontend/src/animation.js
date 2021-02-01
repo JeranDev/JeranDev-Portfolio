@@ -1,11 +1,9 @@
 export const pageAnimation = {
   hidden: {
     opacity: 0,
-    y: 300,
   },
   show: {
     opacity: 1,
-    y: 0,
     transition: {
       duration: 0.5,
       when: 'beforeChildren',
@@ -17,5 +15,29 @@ export const pageAnimation = {
     transition: {
       duration: 0.5,
     },
+  },
+}
+
+export const fade = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { duration: 0.75, ease: 'easeOut' },
+  },
+}
+
+export const backgroundFade = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { duration: 2, ease: 'easeOut' },
+  },
+}
+
+export const titleAnim = {
+  hidden: { y: -200 },
+  show: {
+    y: 0,
+    transition: { duration: 0.75, ease: 'easeOut' },
   },
 }

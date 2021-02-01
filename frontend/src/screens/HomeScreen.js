@@ -1,19 +1,22 @@
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
+import { backgroundFade, pageAnimation, titleAnim } from '../animation'
 import code from '../images/code.jpg'
 import Links from '../components/Links'
 
 const HomeScreen = () => {
   return (
-    <Cover>
-      <Home />
-      <Info>
-        <h2>
-          <span>Full-Stack Web Developer</span>
-        </h2>
-      </Info>
-      <Links />
-    </Cover>
+    <motion.div variants={pageAnimation} initial='hidden' animate='show'>
+      <Cover>
+        <Background variants={backgroundFade} initial='hidden' animate='show' />
+        <Info>
+          <motion.h2 variants={titleAnim} initial='hidden' animate='show'>
+            <motion.span>Full-Stack Web Developer</motion.span>
+          </motion.h2>
+        </Info>
+        <Links />
+      </Cover>
+    </motion.div>
   )
 }
 
@@ -23,7 +26,7 @@ const Cover = styled(motion.div)`
   background-color: rgba(0, 0, 0, 0.8);
 `
 
-const Home = styled(motion.div)`
+const Background = styled(motion.div)`
   position: absolute;
   width: 100vw;
   height: 100vh;

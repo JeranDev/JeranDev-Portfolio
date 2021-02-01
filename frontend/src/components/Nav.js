@@ -76,7 +76,7 @@ const StyledNav = styled(motion.nav)`
   align-items: center;
   padding: 1rem 10rem;
   background: #1f2529;
-  position: sticky;
+  position: relative;
   top: 0;
   z-index: 10;
   border-bottom: 1px solid #46eb43;
