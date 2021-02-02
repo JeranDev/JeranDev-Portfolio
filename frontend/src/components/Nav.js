@@ -76,8 +76,10 @@ const StyledNav = styled(motion.nav)`
   align-items: center;
   padding: 1rem 10rem;
   background: #1f2529;
-  position: relative;
+  position: absolute;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 10;
   border-bottom: 1px solid #46eb43;
   a {
@@ -110,7 +112,7 @@ const StyledNav = styled(motion.nav)`
   }
   @media (max-width: 1300px) {
     flex-direction: column;
-    padding: 2rem 1rem;
+    padding: 0rem 1rem;
     #logo {
       display: inline-block;
       margin: 2rem;

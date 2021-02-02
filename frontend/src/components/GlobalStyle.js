@@ -18,7 +18,6 @@ const GlobalStyle = createGlobalStyle`
   color: white;
   font-family: 'Lato', sans-serif;
   overflow-x: hidden;
-  overflow-y: hidden;
   }
   
   button {
@@ -62,7 +61,6 @@ const GlobalStyle = createGlobalStyle`
   }
 
   p {
-  padding: 3rem 0;
   color: #ccc;
   font-size: 1.4rem;
   line-height: 150%;
