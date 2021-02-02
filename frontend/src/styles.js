@@ -5,16 +5,41 @@ export const Container = styled(motion.div)`
   position: relative;
   width: auto;
   margin: 12rem auto;
-  img {
-    max-height: 400px;
+`
+
+export const ImageWrapper = styled(motion.div)`
+  display: flex;
+  flex: row-wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  .arrow-left,
+  .arrow-right {
+    font-size: 3rem;
+    margin: 3rem;
+    &:hover {
+      color: #46eb43;
+      cursor: pointer;
+    }
   }
-  @media (max-width: 1200px) {
-    img {
-      width: 80%;
-      height: auto;
+  img {
+    height: 500px;
+    width: 50%;
+    object-fit: cover;
+    transition: transform 0.5s, filter 0.5s ease-in-out;
+    filter: grayscale(100%);
+    &:hover {
+      filter: grayscale(0);
+      transform: scale(1.05);
+    }
+    @media (max-width: 1200px) {
+      height: 100%;
+      width: 90%;
+      filter: none;
     }
   }
 `
+
 export const Wrapper = styled(motion.div)`
   display: flex;
   flex-flow: column wrap;
@@ -24,11 +49,13 @@ export const Wrapper = styled(motion.div)`
   height: 100%;
   width: 100%;
   .flex-item {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     a {
       display: grid;
-      caption {
+      text-align: center;
+      span {
         margin-bottom: 0.5rem;
+        color: white;
       }
     }
   }

@@ -1,12 +1,29 @@
+import { useState, useEffect } from 'react'
 //Styling
 import { motion } from 'framer-motion'
 import { pageAnimation } from '../animation'
-import { Container, Wrapper } from '../styles'
+import { Container, Wrapper, ImageWrapper } from '../styles'
 import oldegg from '../images/oldegg.png'
+import javascript from '../images/javascript.jpg'
+import code from '../images/code.jpg'
 //Components
 import ProjectLinks from '../components/ProjectLinks'
 
 const EcommScreen = () => {
+  const images = [oldegg, javascript, code]
+  const [counter, setCounter] = useState(0)
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (counter >= images.length - 1) {
+        setCounter(0)
+      } else {
+        setCounter(counter + 1)
+      }
+      console.log(counter)
+    }, 5000)
+  }, [counter, images.length])
+
   return (
     <Container
       variants={pageAnimation}
@@ -19,7 +36,6 @@ const EcommScreen = () => {
           Project: <motion.span>Oldegg</motion.span>
         </motion.h2>
         <ProjectLinks />
-        <motion.img className='flex-item' src={oldegg} />
         <motion.p className='flex-item'>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. A, sint
           pariatur at porro laborum dicta architecto debitis unde delectus iure
@@ -32,6 +48,13 @@ const EcommScreen = () => {
           eaque.
         </motion.p>
       </Wrapper>
+      <ImageWrapper>
+        <motion.img
+          className='flex-item'
+          src={images[counter]}
+          alt='Oldegg Pages'
+        />
+      </ImageWrapper>
     </Container>
   )
 }

@@ -24,6 +24,12 @@ export const fade = {
     opacity: 1,
     transition: { duration: 0.75, ease: 'easeOut' },
   },
+  exit: {
+    opacity: 0,
+    transition: {
+      duration: { duration: 0.75, ease: 'easeOut' },
+    },
+  },
 }
 
 export const backgroundFade = {
