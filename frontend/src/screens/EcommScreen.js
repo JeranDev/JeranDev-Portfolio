@@ -1,61 +1,23 @@
-import { useState, useEffect } from 'react'
-//Styling
-import { motion } from 'framer-motion'
-import { pageAnimation } from '../animation'
-import { Container, Wrapper, ImageWrapper } from '../styles'
+//Images
 import oldegg from '../images/oldegg.png'
-import javascript from '../images/javascript.jpg'
-import code from '../images/code.jpg'
+import oldeggItem from '../images/oldeggItem.png'
+import oldeggOrder from '../images/oldeggOrder.png'
 //Components
-import ProjectLinks from '../components/ProjectLinks'
+import Project from '../components/Project'
 
 const EcommScreen = () => {
-  const images = [oldegg, javascript, code]
-  const [counter, setCounter] = useState(0)
-
-  useEffect(() => {
-    setTimeout(() => {
-      if (counter >= images.length - 1) {
-        setCounter(0)
-      } else {
-        setCounter(counter + 1)
-      }
-      console.log(counter)
-    }, 5000)
-  }, [counter, images.length])
-
+  const description =
+    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum inventore nam maxime facilis, dignissimos architecto? Et quas sunt saepe nisi facere! Voluptatum modi quae necessitatibus earum ea, tenetur consequuntur eos repudiandae cum id rerum quisquam vel possimus nihil exercitationem corrupti velit? Voluptatum totam eius dolor iste iure accusamus. Nemo, expedita pariatur? Aut minus iure magni consequuntur provident libero nobis illo laudantium dolorum, optio distinctio velit debitis inventore nulla pariatur illum voluptates et beatae quod iusto dignissimos voluptate consectetur perferendis! Obcaecati.'
+  const images = [oldegg, oldeggItem, oldeggOrder]
   return (
-    <Container
-      variants={pageAnimation}
-      initial='hidden'
-      animate='show'
-      exit='exit'
-    >
-      <Wrapper>
-        <motion.h2 className='flex-item'>
-          Project: <motion.span>Oldegg</motion.span>
-        </motion.h2>
-        <ProjectLinks />
-        <motion.p className='flex-item'>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. A, sint
-          pariatur at porro laborum dicta architecto debitis unde delectus iure
-          perferendis totam illo quaerat dolorem fuga placeat nisi autem tempore
-          culpa fugit odit vel cum! Harum ad dignissimos tenetur error culpa
-          amet, maxime qui perferendis recusandae sunt incidunt repellendus,
-          iure ipsum? Porro, at hic! Ipsum totam sunt quod ducimus suscipit
-          magni nihil consequatur commodi eos aliquam illo provident quam iste
-          repellat, eum placeat est! Architecto voluptas eum vitae voluptatum
-          eaque.
-        </motion.p>
-      </Wrapper>
-      <ImageWrapper>
-        <motion.img
-          className='flex-item'
-          src={images[counter]}
-          alt='Oldegg Pages'
-        />
-      </ImageWrapper>
-    </Container>
+    <Project
+      name='Oldegg'
+      nameColor='#577AAC'
+      description={description}
+      website='https://mernshopproject.herokuapp.com'
+      code='https://github.com/JeranDev/Oldegg'
+      images={images}
+    />
   )
 }
 

@@ -33,7 +33,7 @@ const Nav = () => {
         </h1>
         <ul>
           <motion.li whileHover={{ scale: 1.2 }}>
-            <Link to='/ecomm'>Project: E-Comm</Link>
+            <Link to='/ecomm'>Project: Oldegg</Link>
             <Line
               transition={{ duration: 0.75 }}
               initial={{ width: '0%' }}
@@ -43,12 +43,12 @@ const Nav = () => {
             />
           </motion.li>
           <motion.li whileHover={{ scale: 1.2 }}>
-            <Link to='/plantbag'>Project: Plant Bag</Link>
+            <Link to='/plantsack'>Project: Plant Sack</Link>
             <Line
               transition={{ duration: 0.75 }}
               initial={{ width: '0%' }}
               animate={{
-                width: pathname === '/plantbag' ? '100%' : '0%',
+                width: pathname === '/plantsack' ? '100%' : '0%',
               }}
             />
           </motion.li>

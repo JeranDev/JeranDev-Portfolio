@@ -25,7 +25,7 @@ export const ImageWrapper = styled(motion.div)`
   img {
     height: 500px;
     width: 50%;
-    object-fit: cover;
+    /* object-fit: ; */
     transition: transform 0.5s, filter 0.5s ease-in-out;
     filter: grayscale(100%);
     &:hover {
@@ -53,6 +53,7 @@ export const Wrapper = styled(motion.div)`
     a {
       display: grid;
       text-align: center;
+      text-decoration: none;
       span {
         margin-bottom: 0.5rem;
         color: white;
