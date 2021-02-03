@@ -22,20 +22,41 @@ export const ImageWrapper = styled(motion.div)`
       cursor: pointer;
     }
   }
-  img {
-    height: 500px;
-    width: 50%;
-    /* object-fit: ; */
-    transition: transform 0.5s, filter 0.5s ease-in-out;
-    filter: grayscale(100%);
-    &:hover {
-      filter: grayscale(0);
-      transform: scale(1.05);
-    }
+  figure {
+    position: relative;
     @media (max-width: 1200px) {
-      height: 100%;
       width: 90%;
-      filter: none;
+    }
+  }
+  img {
+    max-height: 500px;
+    width: 100%;
+    cursor: pointer;
+    @media (max-width: 1200px) {
+      height: 90%;
+    }
+  }
+  figcaption {
+    opacity: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: #46eb43;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: 4rem;
+    font-weight: 700;
+    transition: opacity 0.2s ease-in;
+    i {
+      margin-left: 0.5rem;
+    }
+    &:hover {
+      opacity: 1;
     }
   }
 `
@@ -45,7 +66,6 @@ export const Wrapper = styled(motion.div)`
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
   height: 100%;
   width: 100%;
   .flex-item {
@@ -69,7 +89,7 @@ export const Wrapper = styled(motion.div)`
       width: 80%;
     }
     h2 {
-      font-size: 3rem;
+      font-size: 3.5rem;
     }
   }
   @media (max-width: 1100px) and (max-height: 1000px) {
@@ -99,6 +119,11 @@ export const StyledLinks = styled(motion.div)`
     i {
       font-size: 8rem;
       padding: 0 2.5rem;
+    }
+  }
+  @media (max-width: 1200px) {
+    i {
+      font-size: 5rem;
     }
   }
 `

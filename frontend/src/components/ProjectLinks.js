@@ -20,7 +20,7 @@ const ProjectLinks = ({ website, code }) => {
           target='_blank'
         >
           <motion.span>Website</motion.span>
-          <motion.i className='fas fa-desktop' style={{ fontSize: ' 3rem' }} />
+          <motion.i className='fas fa-desktop project-link' />
         </motion.a>
 
         <motion.a
@@ -31,10 +31,7 @@ const ProjectLinks = ({ website, code }) => {
           target='_blank'
         >
           <motion.span>Code</motion.span>
-          <motion.i
-            className='fab fa-github-square'
-            style={{ fontSize: ' 3rem' }}
-          ></motion.i>
+          <motion.i className='fab fa-github-square project-link'></motion.i>
         </motion.a>
       </StyledLinks>
     </>

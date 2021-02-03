@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 //Styling
 import { motion } from 'framer-motion'
-import { pageAnimation } from '../animation'
+import { pageAnimation, fade } from '../animation'
 import { Container, Wrapper, ImageWrapper } from '../styles'
 //Components
 import ProjectLinks from '../components/ProjectLinks'
@@ -30,17 +30,27 @@ const Project = ({ name, description, website, code, images, nameColor }) => {
       <Wrapper>
         <motion.h2 className='flex-item'>
           Project:{' '}
-          <motion.span style={{ color: nameColor }}>{name}</motion.span>
+          <motion.span
+            style={{ color: nameColor }}
+            variants={fade}
+            initial='hidden'
+            animate='show'
+          >
+            {name}
+          </motion.span>
         </motion.h2>
         <ProjectLinks website={website} code={code} />
         <motion.p className='flex-item'>{description}</motion.p>
       </Wrapper>
       <ImageWrapper>
-        <motion.img
-          className='flex-item'
-          src={images[counter]}
-          alt={`${name} Pages`}
-        />
+        <motion.figure className='flex-item'>
+          <motion.img src={images[counter]} alt={`${name} Pages`} />
+          <motion.a href={website}>
+            <motion.figcaption>
+              Visit Live Site <i className='fas fa-arrow-right' />
+            </motion.figcaption>
+          </motion.a>
+        </motion.figure>
       </ImageWrapper>
     </Container>
   )

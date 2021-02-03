@@ -115,6 +115,7 @@ const StyledNav = styled(motion.nav)`
     padding: 0rem 1rem;
     #logo {
       display: inline-block;
+      font-size: 3.5rem;
       margin: 2rem;
       text-align: center;
       line-height: 0.8;
@@ -124,8 +125,19 @@ const StyledNav = styled(motion.nav)`
       justify-content: space-around;
       width: 100%;
       li {
-        font-size: 1rem;
+        font-size: 1.5rem;
         padding: 0;
+      }
+    }
+  }
+
+  @media (max-width: 900px) {
+    #logo {
+      font-size: 2.5rem;
+    }
+    ul {
+      li {
+        font-size: 1rem;
       }
     }
   }
