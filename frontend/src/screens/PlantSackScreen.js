@@ -2,6 +2,7 @@
 import plantsack from '../images/plantsack.png'
 import plantsackDetails from '../images/plantsackDetails.png'
 import plantsackLoading from '../images/plantsackLoading.png'
+import plantsackBackground from '../images/plantsackBackground.jpg'
 //Components
 import Project from '../components/Project'
 
@@ -14,7 +15,8 @@ const PlantSackScreen = () => {
       name='Plant Sack'
       nameColor='#88B981'
       description={description}
-      website=''
+      backgroundImage={plantsackBackground}
+      website='https://plantsackproject.herokuapp.com/'
       code='https://github.com/JeranDev/Plant-Sack'
       images={images}
     />

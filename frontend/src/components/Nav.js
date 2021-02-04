@@ -75,13 +75,14 @@ const StyledNav = styled(motion.nav)`
   justify-content: space-between;
   align-items: center;
   padding: 1rem 10rem;
-  background: #1f2529;
+  background: linear-gradient(#191d1f, #232a2e);
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   z-index: 10;
   border-bottom: 1px solid #46eb43;
+  /* border-bottom: 1px solid #232a2e; */
   a {
     color: white;
     text-decoration: none;

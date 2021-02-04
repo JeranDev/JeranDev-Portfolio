@@ -2,6 +2,7 @@
 import oldegg from '../images/oldegg.png'
 import oldeggItem from '../images/oldeggItem.png'
 import oldeggOrder from '../images/oldeggOrder.png'
+import oldeggBackground from '../images/oldeggBackground.jpg'
 //Components
 import Project from '../components/Project'
 
@@ -14,6 +15,7 @@ const EcommScreen = () => {
       name='Oldegg'
       nameColor='#577AAC'
       description={description}
+      backgroundImage={oldeggBackground}
       website='https://mernshopproject.herokuapp.com'
       code='https://github.com/JeranDev/Oldegg'
       images={images}

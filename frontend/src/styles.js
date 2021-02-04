@@ -1,10 +1,33 @@
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
+export const Cover = styled(motion.div)`
+  position: absolute;
+  width: 100%;
+  padding-bottom: 2rem;
+  background-color: rgba(0, 0, 0, 0.85);
+  @media (min-width: 700px) and (min-height: 1000px) and (max-width: 1000px) and (max-height: 1300px) {
+    height: 100%;
+  }
+`
+
+export const Background = styled(motion.div)`
+  position: absolute;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  background-position: 50% 50%;
+  background-size: cover;
+  z-index: -1;
+`
+
 export const Container = styled(motion.div)`
   position: relative;
   width: auto;
-  margin: 12rem auto;
+  margin: 12rem auto 0 auto;
+  @media (max-width: 1200px) {
+    margin: 15rem auto 0 auto;
+  }
 `
 
 export const ImageWrapper = styled(motion.div)`
@@ -90,6 +113,7 @@ export const Wrapper = styled(motion.div)`
     }
     h2 {
       font-size: 3.5rem;
+      margin: 0 0.2rem;
     }
   }
   @media (max-width: 1100px) and (max-height: 1000px) {

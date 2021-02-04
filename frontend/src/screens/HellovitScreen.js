@@ -2,6 +2,7 @@
 import hellovit from '../images/hellovit.png'
 import hellovitStore from '../images/hellovitStore.png'
 import hellovitAbout from '../images/hellovitAbout.png'
+import hellovitBackground from '../images/hellovitBackground.jpg'
 //Components
 import Project from '../components/Project'
 
@@ -14,6 +15,7 @@ const HellovitScreen = () => {
       name='Hellovit'
       nameColor='#9ACD32'
       description={description}
+      backgroundImage={hellovitBackground}
       website='https://fathomless-temple-81469.herokuapp.com'
       code='https://github.com/JeranDev/Hellovit'
       images={images}
