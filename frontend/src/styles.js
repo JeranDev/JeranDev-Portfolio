@@ -53,6 +53,7 @@ export const ImageWrapper = styled(motion.div)`
   }
   figure {
     position: relative;
+    width: 50%;
     @media (max-width: 1200px) {
       width: 90%;
     }
