@@ -9,6 +9,9 @@ export const Cover = styled(motion.div)`
   @media (min-width: 700px) and (min-height: 1000px) and (max-width: 1000px) and (max-height: 1300px) {
     height: 100%;
   }
+  @media (min-height: 1340px) {
+    height: 110%;
+  }
 `
 
 export const Background = styled(motion.div)`
@@ -27,6 +30,9 @@ export const Container = styled(motion.div)`
   margin: 12rem auto 0 auto;
   @media (max-width: 1200px) {
     margin: 15rem auto 0 auto;
+  }
+  @media (min-width: 2800px) {
+    margin: 20rem auto 0 auto;
   }
 `
 
@@ -57,6 +63,9 @@ export const ImageWrapper = styled(motion.div)`
     cursor: pointer;
     @media (max-width: 1200px) {
       height: 90%;
+    }
+    @media (min-width: 3800px) {
+      max-height: 700px;
     }
   }
   figcaption {
@@ -119,6 +128,12 @@ export const Wrapper = styled(motion.div)`
   @media (max-width: 1100px) and (max-height: 1000px) {
     flex-flow: row wrap;
   }
+  @media (min-width: 3800px) {
+    p {
+      width: 40%;
+      font-size: 2.5rem;
+    }
+  }
 `
 
 export const StyledLinks = styled(motion.div)`
@@ -140,6 +155,9 @@ export const StyledLinks = styled(motion.div)`
     color: inherit;
   }
   @media (min-width: 2800px) {
+    span {
+      font-size: 2rem;
+    }
     i {
       font-size: 8rem;
       padding: 0 2.5rem;
