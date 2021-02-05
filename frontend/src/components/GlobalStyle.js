@@ -7,11 +7,6 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: 0;
   }
 
-  html,
-  body {
-    width: 100%;
-  }
-
   html {
   @media (max-width: 1700px) {
     font-size: 75%

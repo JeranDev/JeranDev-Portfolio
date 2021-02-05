@@ -70,6 +70,7 @@ const Nav = () => {
 
 const StyledNav = styled(motion.nav)`
   min-height: 10vh;
+  overflow: hidden;
   display: flex;
   margin: auto;
   justify-content: space-between;
