@@ -19,7 +19,7 @@ const HellovitScreen = () => {
       description={description}
       technologies={technologies}
       backgroundImage={hellovitBackground}
-      website='https://fathomless-temple-81469.herokuapp.com'
+      website='https://hellovitproject.herokuapp.com/'
       code='https://github.com/JeranDev/Hellovit'
       images={images}
     />
