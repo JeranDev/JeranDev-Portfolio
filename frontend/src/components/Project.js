@@ -9,6 +9,7 @@ import ProjectLinks from '../components/ProjectLinks'
 const Project = ({
   name,
   description,
+  technologies,
   website,
   code,
   images,
@@ -55,6 +56,9 @@ const Project = ({
             </motion.h2>
             <ProjectLinks website={website} code={code} />
             <motion.p className='flex-item'>{description}</motion.p>
+            <motion.p className='flex-item' style={{ textAlign: 'center' }}>
+              <motion.span>{technologies}</motion.span>
+            </motion.p>
           </Wrapper>
           <ImageWrapper>
             <motion.figure className='flex-item'>

@@ -8,13 +8,16 @@ import Project from '../components/Project'
 
 const PlantSackScreen = () => {
   const description =
-    'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia obcaecati doloremque a. Reiciendis praesentium ea quos laborum, deserunt saepe quas tempora eos iusto quia ipsam voluptatem. Cum porro libero molestias vel hic ex, eligendi nesciunt. Saepe maxime sequi hic doloremque, iste corrupti error voluptates minus dignissimos. Asperiores, deserunt! Fugit accusantium laboriosam unde voluptatibus corrupti! Dicta aspernatur necessitatibus maxime quas similique illo perferendis nihil praesentium! Voluptates sit sapiente natus earum aut, iusto quibusdam minus laboriosam ipsa numquam enim vitae! Sunt, vel.'
+    'A single-page plant database using the MERN stack. By pulling data from the Trefle API, the components are dynamically rendered, allowing you to see more of plant details. Features include “infinite” scrolling, smooth animations using Framer-Motion, and styling using Styled-Components.'
+  const technologies =
+    'Tech-Stack Includes React, Redux, MongoDB, Express.js, and Node.js'
   const images = [plantsack, plantsackDetails, plantsackLoading]
   return (
     <Project
       name='Plant Sack'
       nameColor='#88B981'
       description={description}
+      technologies={technologies}
       backgroundImage={plantsackBackground}
       website='https://plantsackproject.herokuapp.com/'
       code='https://github.com/JeranDev/Plant-Sack'

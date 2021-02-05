@@ -114,6 +114,7 @@ export const Wrapper = styled(motion.div)`
   }
   p {
     width: 50%;
+    margin: 0 1rem;
   }
   @media (max-width: 800px) {
     flex-flow: row wrap;

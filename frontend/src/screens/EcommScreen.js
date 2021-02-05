@@ -7,14 +7,16 @@ import oldeggBackground from '../images/oldeggBackground.jpg'
 import Project from '../components/Project'
 
 const EcommScreen = () => {
-  const description =
-    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum inventore nam maxime facilis, dignissimos architecto? Et quas sunt saepe nisi facere! Voluptatum modi quae necessitatibus earum ea, tenetur consequuntur eos repudiandae cum id rerum quisquam vel possimus nihil exercitationem corrupti velit? Voluptatum totam eius dolor iste iure accusamus. Nemo, expedita pariatur? Aut minus iure magni consequuntur provident libero nobis illo laudantium dolorum, optio distinctio velit debitis inventore nulla pariatur illum voluptates et beatae quod iusto dignissimos voluptate consectetur perferendis! Obcaecati.'
+  const description = `The one-stop shop for all things electronics! A top-products carousel, user review system, protected logins, admin logins for fufilling orders, styled with React-Bootstrap, and using the PayPal API, this is the perfect starting E-Commerce platform that can be scaled and adapted to any business.`
+  const technologies =
+    'Tech-Stack Includes React, Redux, MongoDB, Express.js, and Node.js'
   const images = [oldegg, oldeggItem, oldeggOrder]
   return (
     <Project
       name='Oldegg'
       nameColor='#577AAC'
       description={description}
+      technologies={technologies}
       backgroundImage={oldeggBackground}
       website='https://mernshopproject.herokuapp.com'
       code='https://github.com/JeranDev/Oldegg'

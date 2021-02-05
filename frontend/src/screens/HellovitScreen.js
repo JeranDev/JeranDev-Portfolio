@@ -8,13 +8,16 @@ import Project from '../components/Project'
 
 const HellovitScreen = () => {
   const description =
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut nihil corporis dicta amet! Ipsam velit optio, molestiae dolor odio eos quidem consequuntur recusandae quaerat numquam dolorem a quas ea libero eius ut aliquam natus officiis soluta mollitia, eum culpa delectus atque. Eligendi soluta hic itaque dicta possimus qui sint unde autem accusamus nisi, expedita quae officia minus vel facilis quam mollitia placeat nihil sunt repudiandae voluptate consequuntur. Minima laudantium eum quis totam reiciendis voluptatum unde incidunt! Eaque nam quis praesentium?'
+    'A simple yet dynamic page for my brother-in-law’s musical career. Using EJS templating, SCSS, and vanilla JavaScript, features implemented were an Express.js back-end, NodeMailer API for the contact page, Mailchimp API for advertising, and Stripe API for card-processing.'
+  const technologies =
+    'Tech-Stack Includes EJS Templating, MongoDB / MySQL, Express.js, and Node.js'
   const images = [hellovit, hellovitStore, hellovitAbout]
   return (
     <Project
       name='Hellovit'
       nameColor='#9ACD32'
       description={description}
+      technologies={technologies}
       backgroundImage={hellovitBackground}
       website='https://fathomless-temple-81469.herokuapp.com'
       code='https://github.com/JeranDev/Hellovit'
