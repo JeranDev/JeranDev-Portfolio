@@ -6,6 +6,7 @@ import { Cover, Background } from '../styles'
 import code from '../images/code.jpg'
 //Components
 import HomeLinks from '../components/HomeLinks'
+import ScrollTop from '../components/ScrollTop'
 
 const HomeScreen = () => {
   //Hide Scrollbar
@@ -30,6 +31,7 @@ const HomeScreen = () => {
         </Info>
         <HomeLinks />
       </Cover>
+      <ScrollTop />
     </motion.div>
   )
 }
