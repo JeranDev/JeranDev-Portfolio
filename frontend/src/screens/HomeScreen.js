@@ -18,7 +18,10 @@ const HomeScreen = () => {
           variants={backgroundFade}
           initial='hidden'
           animate='show'
-          style={{ backgroundImage: `url(${code})` }}
+          style={{
+            backgroundImage: `url(${code})`,
+            backgroundAttachment: 'scroll',
+          }}
         />
         <Info>
           <motion.h2 variants={titleAnim} initial='hidden' animate='show'>
