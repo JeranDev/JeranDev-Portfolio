@@ -11,9 +11,9 @@ import ScrollTop from '../components/ScrollTop'
 const HomeScreen = () => {
   //Hide Scrollbar and Mobile Scrolling
   document.body.style.overflow = 'hidden'
-  document.body.addEventListener(
+  document.addEventListener(
     'touchmove',
-    function (e) {
+    e => {
       e.preventDefault()
     },
     false
