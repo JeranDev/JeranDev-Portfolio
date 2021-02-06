@@ -9,8 +9,15 @@ import HomeLinks from '../components/HomeLinks'
 import ScrollTop from '../components/ScrollTop'
 
 const HomeScreen = () => {
-  //Hide Scrollbar
+  //Hide Scrollbar and Mobile Scrolling
   document.body.style.overflow = 'hidden'
+  document.body.addEventListener(
+    'touchmove',
+    function (e) {
+      e.preventDefault()
+    },
+    false
+  )
 
   return (
     <motion.div variants={pageAnimation} initial='hidden' animate='show'>
