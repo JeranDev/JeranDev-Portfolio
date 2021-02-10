@@ -19,7 +19,8 @@ export const Background = styled(motion.div)`
   background-attachment: fixed;
   width: 100%;
   height: 100%;
-  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-position: 40% 40%;
   background-size: cover;
   z-index: -1;
 `
