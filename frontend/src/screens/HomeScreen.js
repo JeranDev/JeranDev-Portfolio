@@ -34,7 +34,6 @@ const HomeScreen = () => {
           animate='show'
           style={{
             backgroundImage: `url(${code})`,
-            backgroundAttachment: 'scroll',
           }}
         />
         <Info>
