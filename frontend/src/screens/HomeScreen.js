@@ -12,20 +12,24 @@ import ScrollTop from '../components/ScrollTop'
 const HomeScreen = () => {
   //Hide Scrollbar
   const [width, setWidth] = useState(window.innerWidth)
+  const [height, setHeight] = useState(window.innerHeight)
 
-  window.addEventListener('resize', () => setWidth(window.innerWidth))
+  window.addEventListener('resize', () => {
+    setWidth(window.innerWidth)
+    setHeight(window.innerHeight)
+  })
 
   useEffect(() => {
-    if (width > 1200) {
+    if (height > 600) {
       document.body.style.overflow = 'hidden'
     } else {
       document.body.style.overflow = 'scroll'
     }
-  }, [width])
+  }, [height])
 
   return (
     <motion.div variants={pageAnimation} initial='hidden' animate='show'>
-      <Cover style={{ height: '120%' }}>
+      <Cover style={{ height: '135%' }}>
         <Background
           variants={backgroundFade}
           initial='hidden'
@@ -51,7 +55,7 @@ const Info = styled(motion.div)`
   display: flex;
   flex-flow: row wrap;
   position: relative;
-  height: 45%;
+  height: 35%;
   justify-content: center;
   align-items: flex-end;
   padding-bottom: 2rem;
