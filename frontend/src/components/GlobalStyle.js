@@ -7,6 +7,25 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: 0;
   }
 
+  *::-webkit-scrollbar {
+  width: 5px;
+  }
+
+  *::-webkit-scrollbar-track {
+  background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+  background-color: rgba(155, 155, 155, 0.5);
+  border-radius: 20px;
+  border: transparent;
+  }
+
+  :root{
+  scrollbar-color: rgba(155, 155, 155, 0.5) rgba(0, 0, 0, 0.5) !important;
+  scrollbar-width: thin !important;
+  }
+
   html {
   @media (max-width: 1700px) {
     font-size: 75%
@@ -34,7 +53,6 @@ const GlobalStyle = createGlobalStyle`
     color: black;
     }
   }
-
 
   h2 {
   font-weight: lighter;

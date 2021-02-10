@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 //Styles
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
@@ -9,19 +10,22 @@ import HomeLinks from '../components/HomeLinks'
 import ScrollTop from '../components/ScrollTop'
 
 const HomeScreen = () => {
-  //Hide Scrollbar and Mobile Scrolling
-  document.body.style.overflow = 'hidden'
-  document.addEventListener(
-    'touchmove',
-    e => {
-      e.preventDefault()
-    },
-    false
-  )
+  //Hide Scrollbar
+  const [width, setWidth] = useState(window.innerWidth)
+
+  window.addEventListener('resize', () => setWidth(window.innerWidth))
+
+  useEffect(() => {
+    if (width > 1200) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'scroll'
+    }
+  }, [width])
 
   return (
     <motion.div variants={pageAnimation} initial='hidden' animate='show'>
-      <Cover style={{ height: '100%' }}>
+      <Cover style={{ height: '110%' }}>
         <Background
           variants={backgroundFade}
           initial='hidden'
@@ -57,7 +61,7 @@ const Info = styled(motion.div)`
     padding-bottom: 1rem;
   }
   @media (max-height: 700px) {
-    margin-top: 4rem;
+    margin-top: 6rem;
   }
 `
 
