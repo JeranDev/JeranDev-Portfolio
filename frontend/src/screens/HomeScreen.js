@@ -25,7 +25,7 @@ const HomeScreen = () => {
 
   return (
     <motion.div variants={pageAnimation} initial='hidden' animate='show'>
-      <Cover style={{ height: '110%' }}>
+      <Cover style={{ height: '120%' }}>
         <Background
           variants={backgroundFade}
           initial='hidden'
@@ -60,7 +60,7 @@ const Info = styled(motion.div)`
     border-bottom: 1px solid #46eb43;
     padding-bottom: 1rem;
   }
-  @media (max-height: 700px) {
+  @media (max-height: 600px) {
     margin-top: 6rem;
   }
 `
