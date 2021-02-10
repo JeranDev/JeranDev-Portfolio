@@ -18,7 +18,7 @@ const EcommScreen = () => {
       description={description}
       technologies={technologies}
       backgroundImage={oldeggBackground}
-      website='https://mernshopproject.herokuapp.com'
+      website='https://oldeggproject.herokuapp.com'
       code='https://github.com/JeranDev/Oldegg'
       images={images}
     />
