@@ -39,17 +39,6 @@ const Project = ({
     }, 5000)
   }, [counter, images.length])
 
-  // const handleClick = e => {
-  //   e.preventDefault()
-  //   if (e.target.value === 'next') {
-  //     if (counter >= images.length - 1) {
-  //       setCounter(0)
-  //     } else {
-  //       setCounter(counter + 1)
-  //     }
-  //   }
-  // }
-
   return (
     <motion.div variants={pageAnimation} initial='hidden' animate='show'>
       <Cover>
@@ -113,9 +102,6 @@ const Project = ({
               </motion.a>
             </motion.figure>
           </ImageWrapper>
-          {/* <motion.button onClick={handleClick} value='next'>
-            Next
-          </motion.button> */}
         </Container>
       </Cover>
     </motion.div>
