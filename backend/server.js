@@ -1,11 +1,12 @@
 import path from 'path'
 import express from 'express'
 import dotenv from 'dotenv'
-import sslRedirect from 'heroku-ssl-redirect'
+import herokuSSLRedirect from 'heroku-ssl-redirect'
 
 const app = express()
 
 //Enable SSL Redirect
+const sslRedirect = herokuSSLRedirect.default
 app.use(sslRedirect())
 
 dotenv.config()
