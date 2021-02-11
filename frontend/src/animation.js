@@ -32,6 +32,14 @@ export const fade = {
   },
 }
 
+export const carouselFade = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { duration: 1, ease: 'easeIn' },
+  },
+}
+
 export const backgroundFade = {
   hidden: { opacity: 0 },
   show: {

@@ -4,13 +4,19 @@ import { motion } from 'framer-motion'
 export const Cover = styled(motion.div)`
   position: absolute;
   width: 100%;
-  padding-bottom: 2rem;
+  min-height: 1300px;
   background-color: rgba(0, 0, 0, 0.85);
-  @media (min-width: 700px) and (min-height: 1000px) and (max-width: 1000px) and (max-height: 1300px) {
-    height: 100%;
+  @media (min-height: 1300px) {
+    min-height: 2000px;
   }
-  @media (min-height: 1340px) {
-    height: 110%;
+  @media (max-width: 600px) {
+    min-height: 1000px;
+  }
+  @media (max-width: 1000px) and (max-height: 600px) {
+    min-height: 1000px;
+  }
+  @media (max-width: 1000px) and (max-height: 1400px) {
+    min-height: 100%;
   }
 `
 
@@ -38,11 +44,10 @@ export const Container = styled(motion.div)`
 `
 
 export const ImageWrapper = styled(motion.div)`
-  display: flex;
-  flex: row-wrap;
+  display: grid;
   justify-content: center;
   align-items: center;
-  margin-top: 3rem;
+  margin: 3rem 0;
   .arrow-left,
   .arrow-right {
     font-size: 3rem;
@@ -54,14 +59,12 @@ export const ImageWrapper = styled(motion.div)`
   }
   figure {
     position: relative;
-    width: 50%;
-    @media (max-width: 1200px) {
-      width: 90%;
-    }
+    width: 90%;
+    margin: 0 auto;
   }
   img {
     max-height: 500px;
-    width: 100%;
+    min-width: 100%;
     cursor: pointer;
     @media (max-width: 1200px) {
       height: 90%;
@@ -93,6 +96,22 @@ export const ImageWrapper = styled(motion.div)`
       opacity: 1;
     }
   }
+`
+
+export const SlideCover = styled(motion.div)`
+  width: 100%;
+  height: 100%;
+  background: transparent;
+`
+
+export const Slide = styled(motion.img)`
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  grid-area: 1 / 1 / 2 / 2;
 `
 
 export const Wrapper = styled(motion.div)`

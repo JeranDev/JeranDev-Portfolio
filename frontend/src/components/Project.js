@@ -1,8 +1,15 @@
 import { useState, useEffect } from 'react'
 //Styling
 import { motion } from 'framer-motion'
-import { pageAnimation, fade, backgroundFade } from '../animation'
-import { Container, Wrapper, ImageWrapper, Cover, Background } from '../styles'
+import { pageAnimation, fade, carouselFade, backgroundFade } from '../animation'
+import {
+  Container,
+  Wrapper,
+  ImageWrapper,
+  Slide,
+  Cover,
+  Background,
+} from '../styles'
 //Components
 import ProjectLinks from '../components/ProjectLinks'
 
@@ -31,6 +38,17 @@ const Project = ({
       }
     }, 5000)
   }, [counter, images.length])
+
+  // const handleClick = e => {
+  //   e.preventDefault()
+  //   if (e.target.value === 'next') {
+  //     if (counter >= images.length - 1) {
+  //       setCounter(0)
+  //     } else {
+  //       setCounter(counter + 1)
+  //     }
+  //   }
+  // }
 
   return (
     <motion.div variants={pageAnimation} initial='hidden' animate='show'>
@@ -62,7 +80,32 @@ const Project = ({
           </Wrapper>
           <ImageWrapper>
             <motion.figure className='flex-item'>
-              <motion.img src={images[counter]} alt={`${name} Pages`} />
+              {counter === 0 && (
+                <Slide
+                  variants={carouselFade}
+                  initial='hidden'
+                  src={images[counter]}
+                  alt={`${name} Pages`}
+                />
+              )}
+              {counter === 1 && (
+                <Slide
+                  variants={carouselFade}
+                  initial='hidden'
+                  animate='show'
+                  src={images[counter]}
+                  alt={`${name} Pages`}
+                />
+              )}
+              {counter === 2 && (
+                <Slide
+                  variants={carouselFade}
+                  initial='hidden'
+                  animate='show'
+                  src={images[counter]}
+                  alt={`${name} Pages`}
+                />
+              )}
               <motion.a href={website} target='_blank'>
                 <motion.figcaption>
                   Visit Live Site <i className='fas fa-arrow-right' />
@@ -70,6 +113,9 @@ const Project = ({
               </motion.a>
             </motion.figure>
           </ImageWrapper>
+          {/* <motion.button onClick={handleClick} value='next'>
+            Next
+          </motion.button> */}
         </Container>
       </Cover>
     </motion.div>
