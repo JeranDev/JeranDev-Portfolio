@@ -13,7 +13,7 @@ if (process.env.NODE_ENV === 'production') {
 
   app.get('*', (req, res, next) => {
     if ('https' !== req.headers['x-forwarded-proto']) {
-      res.redirect('https://' + req.hostname + req.url)
+      res.redirect('https://www.jerandev.com')
     } else {
       res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'))
     }
