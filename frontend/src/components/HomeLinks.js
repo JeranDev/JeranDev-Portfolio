@@ -1,9 +1,7 @@
 //Styling
 import { motion } from 'framer-motion'
 import { pageAnimation, fade } from '../animation'
-import { StyledLinks, StyledButton } from '../styles'
-//Components
-import resume from '../images/Jeran-Burget-Resume.pdf'
+import { StyledLinks } from '../styles'
 
 const HomeLinks = () => {
   return (
@@ -44,11 +42,6 @@ const HomeLinks = () => {
           ></motion.i>
         </motion.a>
       </StyledLinks>
-      <StyledButton variants={fade} initial='hidden' animate='show'>
-        <motion.a href={resume} target='_blank'>
-          Resumé
-        </motion.a>
-      </StyledButton>
     </>
   )
 }
