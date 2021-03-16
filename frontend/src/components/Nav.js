@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import { useLocation } from 'react-router-dom'
-//Images
-import { WaveOne, WaveTwo, WaveThree } from '../components/Waves'
 
 const Nav = () => {
   const { pathname } = useLocation()
@@ -23,9 +21,6 @@ const Nav = () => {
   return (
     <>
       <StyledNav>
-        <WaveOne />
-        <WaveTwo />
-        <WaveThree />
         <h1>
           <Link id='logo' to='/'>
             Jeran Burget
@@ -69,21 +64,19 @@ const Nav = () => {
 }
 
 const StyledNav = styled(motion.nav)`
+  background: linear-gradient(#000, rgba(0, 0, 0, 0));
   min-height: 10vh;
   overflow: hidden;
   display: flex;
   margin: auto;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   padding: 1rem 10rem;
-  background: linear-gradient(#191d1f, #232a2e);
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   z-index: 10;
-  border-bottom: 1px solid #46eb43;
-  /* border-bottom: 1px solid #232a2e; */
   a {
     color: white;
     text-decoration: none;
