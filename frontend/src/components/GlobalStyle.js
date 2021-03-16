@@ -70,6 +70,7 @@ const GlobalStyle = createGlobalStyle`
 
   a {
   font-size: 1.1.rem;
+  outline: none;
   }
 
   span {
