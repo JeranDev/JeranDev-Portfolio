@@ -107,6 +107,7 @@ const StyledNav = styled(motion.nav)`
   }
   @media (max-width: 1300px) {
     flex-direction: column;
+    align-items: center;
     padding: 0rem 1rem;
     #logo {
       display: inline-block;
