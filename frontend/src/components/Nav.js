@@ -27,7 +27,7 @@ const Nav = () => {
           </Link>
         </h1>
         <ul>
-          <motion.li whileHover={{ scale: 1.2 }}>
+          <motion.li>
             <Link to='/ecomm'>Project: Oldegg</Link>
             <Line
               transition={{ duration: 0.75 }}
@@ -37,7 +37,7 @@ const Nav = () => {
               }}
             />
           </motion.li>
-          <motion.li whileHover={{ scale: 1.2 }}>
+          <motion.li>
             <Link to='/plantsack'>Project: Plant Sack</Link>
             <Line
               transition={{ duration: 0.75 }}
@@ -47,7 +47,7 @@ const Nav = () => {
               }}
             />
           </motion.li>
-          <motion.li whileHover={{ scale: 1.2 }}>
+          <motion.li>
             <Link to='/hellovit'>Project: Hellovit</Link>
             <Line
               transition={{ duration: 0.75 }}
