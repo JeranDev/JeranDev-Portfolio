@@ -13,16 +13,21 @@ const PlantSackScreen = () => {
     'Tech-Stack Includes React, Redux, MongoDB, Express.js, and Node.js'
   const images = [plantsack, plantsackDetails, plantsackLoading]
   return (
-    <Project
-      name='Plant Sack'
-      nameColor='#88B981'
-      description={description}
-      technologies={technologies}
-      backgroundImage={plantsackBackground}
-      website='https://plantsackproject.herokuapp.com/'
-      code='https://github.com/JeranDev/Plant-Sack'
-      images={images}
-    />
+    <>
+      <Project
+        name='Plant Sack'
+        nameColor='#88B981'
+        description={description}
+        technologies={technologies}
+        backgroundImage={plantsackBackground}
+        website='https://plantsackproject.herokuapp.com/'
+        code='https://github.com/JeranDev/Plant-Sack'
+        images={images}
+        extraContent={
+          'Note: The Trefle API is no longer being supported, this project will be replaced soon!'
+        }
+      />
+    </>
   )
 }
 

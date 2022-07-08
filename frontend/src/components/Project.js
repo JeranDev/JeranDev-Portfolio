@@ -22,6 +22,7 @@ const Project = ({
   images,
   nameColor,
   backgroundImage,
+  extraContent,
 }) => {
   //Reveal Scrollbar
   document.body.style.overflow = 'auto'
@@ -61,6 +62,7 @@ const Project = ({
                 {name}
               </motion.span>
             </motion.h2>
+            <motion.h3>{extraContent}</motion.h3>
             <ProjectLinks website={website} code={code} />
             <motion.p className='flex-item'>{description}</motion.p>
             <motion.p className='flex-item' style={{ textAlign: 'center' }}>
