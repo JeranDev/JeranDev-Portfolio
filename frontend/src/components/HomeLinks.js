@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { pageAnimation, fade } from '../animation'
 import { StyledLinks, StyledButton } from '../styles'
 //Files
-import resume from '../images/Jeran-Burget-Resume.pdf'
+import resume from '../images/Jeran-Burget-Resume-2022.pdf'
 
 const HomeLinks = () => {
   return (
